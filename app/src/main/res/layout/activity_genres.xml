@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_genres"
+    android:background="@drawable/bg_gradient"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp">
+
+    <TextView
+        android:text="Movie Genres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/genresLabel"
+        tools:text="Movie Genres"
+        android:textColor="@android:color/white"
+        android:textSize="19sp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:id="@android:id/list"
+        android:layout_above="@+id/genreSearchButtonsHorizLayout"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/genreSearchButtonsHorizLayout">
+
+        <Button
+            android:text="CHOOSE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffffff"
+            android:background="#40ffffff"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:id="@+id/chooseButton"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/continueButton"
+            android:text="CONTINUE"
+            android:textColor="#ffffffff"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:background="#40ffffff"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

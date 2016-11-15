@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.slim0926.movienight3.ui.MainActivity"
+    android:background="@drawable/bg_gradient">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MOVIE NIGHT"
+        android:textSize="32sp"
+        android:textColor="#ffffffff"
+        android:gravity="center_horizontal"
+        android:id="@+id/titleTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:text="Want a list of movies to watch?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="64dp"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:id="@+id/introTextView1"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/titleTextView"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/movie_icon"
+        android:layout_marginTop="18dp"
+        android:id="@+id/movieImageView"
+
+        android:layout_below="@+id/introTextView1"
+        android:layout_toStartOf="@+id/movieCheckBox"/>
+
+    <CheckBox
+        android:text="MOVIES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movieCheckBox"
+        android:textSize="19sp"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/introTextView2"
+        android:layout_alignStart="@+id/introTextView3"
+        android:layout_marginStart="21dp"/>
+
+    <TextView
+        android:text="Or TV shows?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introTextView2"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/movieImageView"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tv_icon"
+        android:id="@+id/tvImageView"
+        android:textSize="16sp"
+        android:layout_below="@+id/introTextView2"
+        android:layout_alignStart="@+id/movieImageView"
+        android:layout_marginTop="11dp"/>
+
+    <CheckBox
+        android:text="TV SHOWS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCheckBox"
+        android:textSize="19sp"
+        android:layout_marginBottom="13dp"
+        android:layout_alignBottom="@+id/tvImageView"
+        android:layout_alignStart="@+id/movieCheckBox"/>
+
+    <TextView
+        android:text="Or both?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introTextView3"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/tvImageView"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/genreSearchButtonsHorizLayout">
+
+        <Button
+            android:text="CHOOSE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffffff"
+            android:background="#40ffffff"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp"
+            android:id="@+id/setShowTypeButton"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/continueButton"
+            android:text="CONTINUE"
+            android:textColor="#ffffffff"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:background="#40ffffff"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

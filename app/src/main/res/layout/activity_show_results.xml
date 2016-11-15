@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_show_search"
+    android:background="@drawable/bg_gradient"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="15dp"
+    >
+
+    <TextView
+        android:text="SORT BY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sortByTextView"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sortBySpinner"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/sortByTextView"/>
+
+    <TextView
+        android:text="DIRECTION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sortDirectionTextView"
+        android:layout_toRightOf="@+id/sortBySpinner"
+
+        android:textColor="@android:color/white"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ascDescSpinner"
+        android:layout_toRightOf="@+id/sortDirectionTextView"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_above="@+id/toTVShowsButton"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sortByTextView"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp"/>
+
+    <Button
+        android:text="CONTINUE TO TV SHOWS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toTVShowsButton"
+        android:background="#40ffffff"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/tmdbLogoImageView"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tmdb_logo_blue"
+        android:id="@+id/tmdbLogoImageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/tmdbLogoNAttribution"
+        android:layout_toStartOf="@+id/tmdbLogoNAttribution"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:text="This product uses the TMDb API but is not endorsed or certified by TMDb."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tmdbLogoNAttribution"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/sortBySpinner"
+        android:layout_marginBottom="10dp"
+        android:textSize="10sp"/>
+
+</RelativeLayout>
